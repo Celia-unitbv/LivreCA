@@ -31,6 +31,7 @@ class LoginFragment : Fragment() {
         binding.btnLogin.setOnClickListener {
             val username = binding.etUsername.text.toString()
             val password = binding.etPassword.text.toString()
+
             if (username.isNotEmpty() && password.isNotEmpty()) {
                 lifecycleScope.launch {
                     context?.let {
@@ -38,7 +39,8 @@ class LoginFragment : Fragment() {
                         if (user != null) {
                             Toast.makeText(it, "Login successful", Toast.LENGTH_SHORT).show()
 
-                            val action = LoginFragmentDirections.actionLoginFragmentToBookListFragment(user.id)
+                            // Navigate to UserFragment
+                            val action = LoginFragmentDirections.actionLoginFragmentToUserFragment()
                             findNavController().navigate(action)
                         } else {
                             Toast.makeText(it, "Invalid username or password", Toast.LENGTH_SHORT).show()
