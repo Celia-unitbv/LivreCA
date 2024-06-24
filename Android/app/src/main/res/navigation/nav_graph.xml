@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/navigation/nav_graph.xml -->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
     app:startDestination="@id/startFragment">
 
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.livreca.StartFragment"
-        android:label="Start Fragment"
         tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/action_startFragment_to_loginFragment"
@@ -19,13 +17,25 @@
     </fragment>
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.livreca.LoginFragment"
-        android:label="Login Fragment"
-        tools:layout="@layout/fragment_login" />
-    <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.livreca.RegisterFragment"
-        android:label="Register Fragment"
         tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.livreca.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.example.livreca.BookListFragment"
+        tools:layout="@layout/fragment_book_list">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

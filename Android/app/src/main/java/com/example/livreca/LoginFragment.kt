@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.livreca.data.AppDatabase
 import com.example.livreca.databinding.FragmentLoginBinding
 import kotlinx.coroutines.launch
@@ -36,7 +37,9 @@ class LoginFragment : Fragment() {
                         val user = AppDatabase.getDatabase(it).userDao().getUser(username, password)
                         if (user != null) {
                             Toast.makeText(it, "Login successful", Toast.LENGTH_SHORT).show()
-                            // Navigați către următorul ecran
+
+                            val action = LoginFragmentDirections.actionLoginFragmentToBookListFragment(user.id)
+                            findNavController().navigate(action)
                         } else {
                             Toast.makeText(it, "Invalid username or password", Toast.LENGTH_SHORT).show()
                         }
