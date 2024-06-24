@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="136dp"
+        android:fontFamily="@font/ingrid_darling"
+        android:text="@string/title"
+        android:textColor="#000000"
+        android:textSize="120sp" />
+
+
+    <TextView
+        android:id="@+id/tv_welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jacques_francois_shadow"
+        android:text="@string/welcome"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/btn_new_here"
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#1E1E1E"
+        android:fontFamily="@font/jacques_francois"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:text="@string/Register"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btn_already_have_account"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#1E1E1E"
+        android:fontFamily="@font/jacques_francois"
+        android:padding="10dp"
+        android:textSize="25sp"
+        android:text="@string/login"
+        android:textColor="#FFFFFF" />
+
+
+</LinearLayout>
