@@ -39,11 +39,7 @@ class BookListFragment : Fragment() {
             adapter = bookAdapter
         }
 
-        if (userId != -1) {
-            loadBooks()
-        } else {
-            // Afișează un mesaj sau gestionează eroarea dacă userId nu este valid
-        }
+        loadBooks()
 
         binding.btnAddBook.setOnClickListener {
             val testBook = Book(userId = userId, name = "Test Book", author = "Test Author", genre = "Test Genre")

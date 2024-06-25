@@ -4,14 +4,9 @@
     <string name="Register">Sunt nou aici</string>
     <string name="welcome">Bine ai venit!</string>
     <string name="title">LivreCa</string>
-    <string name="username">Nume de utilizator</string>
-    <string name="password">Parola</string>
-    <string name="login_button">Logare</string>
-    <string name="email">Email</string>
-    <string name="register_button">Înregistrare</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_user">Hello</string>
-    <string name="user_library">Biblioteca mea 📚</string>
-    <string name="logout_button">Deconectare</string>
-    <string name="user_friends">Prietenii mei  🫂</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="email" >Email</string>
+    <string name="register_button" >Register</string>
 </resources>
