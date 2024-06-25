@@ -13,4 +13,8 @@ interface BookDao {
 
     @Delete
     suspend fun delete(book: Book)
+
+    @Query("UPDATE books SET progress = :progress WHERE id = :bookId")
+    suspend fun updateProgress(bookId: Int, progress: Int)
 }
+

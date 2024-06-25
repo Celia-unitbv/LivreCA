@@ -9,5 +9,6 @@ data class Book(
     val userId: Int,
     val name: String,
     val author: String,
-    val genre: String
+    val genre: String,
+    val progress: Int = 0
 )

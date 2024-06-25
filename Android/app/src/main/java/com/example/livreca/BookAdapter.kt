@@ -25,6 +25,8 @@ class BookAdapter : ListAdapter<Book, BookAdapter.BookViewHolder>(BookDiffCallba
             binding.bookName.text = book.name
             binding.bookAuthor.text = book.author
             binding.bookGenre.text = book.genre
+            binding.progressBar.progress = book.progress
+            binding.progressText.text = "Progress: ${book.progress}%"
         }
     }
 }

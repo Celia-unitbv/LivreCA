@@ -35,9 +35,16 @@ class AddBookFragment : Fragment() {
             val bookName = binding.etBookName.text.toString()
             val bookAuthor = binding.etBookAuthor.text.toString()
             val bookGenre = binding.etBookGenre.text.toString()
+            val bookProgress = binding.etBookProgress.text.toString().toIntOrNull() ?: 0
 
             if (bookName.isNotEmpty() && bookAuthor.isNotEmpty() && bookGenre.isNotEmpty()) {
-                val newBook = Book(userId = args.userId, name = bookName, author = bookAuthor, genre = bookGenre)
+                val newBook = Book(
+                    userId = args.userId,
+                    name = bookName,
+                    author = bookAuthor,
+                    genre = bookGenre,
+                    progress = bookProgress
+                )
                 lifecycleScope.launch {
                     context?.let {
                         AppDatabase.getDatabase(it).bookDao().insert(newBook)
