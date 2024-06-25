@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.livreca.data.AppDatabase
-import com.example.livreca.data.Book
 import com.example.livreca.databinding.FragmentBookListBinding
 import kotlinx.coroutines.launch
 
@@ -18,7 +17,7 @@ class BookListFragment : Fragment() {
     private var _binding: FragmentBookListBinding? = null
     private val binding get() = _binding!!
     private lateinit var bookAdapter: BookAdapter
-    private var userId: Int = -1 // Inițializează cu o valoare invalidă
+    private var userId: Int = -1
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,14 +41,8 @@ class BookListFragment : Fragment() {
         loadBooks()
 
         binding.btnAddBook.setOnClickListener {
-            val testBook = Book(userId = userId, name = "Test Book", author = "Test Author", genre = "Test Genre")
-            lifecycleScope.launch {
-                context?.let {
-                    AppDatabase.getDatabase(it).bookDao().insert(testBook)
-                    // Refresh list after insertion
-                    loadBooks()
-                }
-            }
+            val action = BookListFragmentDirections.actionBookListFragmentToAddBookFragment(userId)
+            findNavController().navigate(action)
         }
     }
 

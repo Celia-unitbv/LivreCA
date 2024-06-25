@@ -1,4 +1,3 @@
-<!-- res/navigation/nav_graph.xml -->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -34,6 +33,18 @@
         android:id="@+id/bookListFragment"
         android:name="com.example.livreca.BookListFragment"
         tools:layout="@layout/fragment_book_list">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_bookListFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.example.livreca.AddBookFragment"
+        tools:layout="@layout/fragment_add_book">
         <argument
             android:name="userId"
             app:argType="integer" />
