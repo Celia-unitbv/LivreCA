@@ -3,12 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/gradient_app_background">
+
+    <TextView
+        android:id="@+id/tv_welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ingrid_darling"
+        android:layout_marginBottom="10dp"
+        android:text="@string/login_message"
+        android:textColor="@color/black"
+        android:textSize="60sp" />
 
     <EditText
         android:id="@+id/et_register_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/jacques_francois"
+        android:textSize="20sp"
         android:hint="@string/username"
         android:inputType="text" />
 
@@ -16,12 +31,19 @@
         android:id="@+id/et_register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/jacques_francois"
         android:hint="@string/password"
+        android:textSize="20sp"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btn_register"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/gradient_text_button"
+        android:fontFamily="@font/jacques_francois"
+        android:padding="10dp"
+        android:textSize="25sp"
         android:text="@string/register_button" />
 </LinearLayout>

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/beige"
+    android:background="@drawable/gradient_app_background"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp">
@@ -13,7 +13,7 @@
         android:layout_height="136dp"
         android:fontFamily="@font/ingrid_darling"
         android:text="@string/title"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="120sp" />
 
 
@@ -23,9 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/jacques_francois_shadow"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:text="@string/welcome"
-        android:textColor="#000000"
-        android:textSize="30sp" />
+        />
 
 
     <Button
@@ -33,24 +34,24 @@
         android:layout_width="291dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="#1E1E1E"
+        android:background="@drawable/gradient_text_button"
         android:fontFamily="@font/jacques_francois"
         android:padding="10dp"
         android:textSize="25sp"
-        android:text="@string/Register"
-        android:textColor="#FFFFFF" />
+        android:textColor="@color/white"
+        android:text="@string/Register"/>
 
     <Button
         android:id="@+id/btn_already_have_account"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="#1E1E1E"
+        android:background="@drawable/gradient_text_button"
         android:fontFamily="@font/jacques_francois"
         android:padding="10dp"
         android:textSize="25sp"
         android:text="@string/login"
-        android:textColor="#FFFFFF" />
+        android:textColor="@color/white" />
 
 
 </LinearLayout>

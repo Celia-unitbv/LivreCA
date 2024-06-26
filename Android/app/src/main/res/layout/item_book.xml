@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:background="@drawable/gradient_item_book">
 
         <TextView
             android:id="@+id/book_name"
