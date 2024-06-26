@@ -29,6 +29,13 @@
             android:layout_height="wrap_content"
             android:textSize="14sp" />
 
+        <TextView
+            android:id="@+id/book_number_of_pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp" /> <!-- Adăugat -->
+
+
         <ProgressBar
             android:id="@+id/progressBar"
             style="@android:style/Widget.ProgressBar.Horizontal"

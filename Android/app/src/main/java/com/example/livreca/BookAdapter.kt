@@ -27,9 +27,11 @@ class BookAdapter : ListAdapter<Book, BookAdapter.BookViewHolder>(BookDiffCallba
             binding.bookGenre.text = book.genre
             binding.progressBar.progress = book.progress
             binding.progressText.text = "Progress: ${book.progress}%"
+            binding.bookNumberOfPages.text = "Pages: ${book.numberOfPages}" // Adăugat
         }
     }
 }
+
 
 class BookDiffCallback : DiffUtil.ItemCallback<Book>() {
     override fun areItemsTheSame(oldItem: Book, newItem: Book): Boolean {

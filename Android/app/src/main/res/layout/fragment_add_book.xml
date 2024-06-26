@@ -34,6 +34,14 @@
         />
 
     <EditText
+        android:id="@+id/et_book_number_of_pages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of Pages"
+        android:inputType="number" /> <!-- Adăugat -->
+
+
+    <EditText
         android:id="@+id/et_book_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

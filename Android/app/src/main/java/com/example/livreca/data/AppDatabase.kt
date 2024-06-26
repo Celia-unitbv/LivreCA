@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [User::class, Book::class], version = 3, exportSchema = false)
+@Database(entities = [User::class, Book::class], version = 4, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
     abstract fun bookDao(): BookDao
@@ -23,7 +23,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "livreca_database"
                 )
-                    .addMigrations(MIGRATION_2_3)
+                    .addMigrations(MIGRATION_2_3, MIGRATION_3_4) // Adăugat MIGRATION_3_4
                     .build()
                 INSTANCE = instance
                 instance
@@ -35,7 +35,14 @@ abstract class AppDatabase : RoomDatabase() {
                 database.execSQL("ALTER TABLE books ADD COLUMN progress INTEGER NOT NULL DEFAULT 0")
             }
         }
+
+        private val MIGRATION_3_4 = object : Migration(3, 4) { // Noua migrare
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.execSQL("ALTER TABLE books ADD COLUMN numberOfPages INTEGER NOT NULL DEFAULT 0")
+            }
+        }
     }
+
 }
 
 
