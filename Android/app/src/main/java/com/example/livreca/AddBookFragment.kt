@@ -36,6 +36,7 @@ class AddBookFragment : Fragment() {
             val bookAuthor = binding.etBookAuthor.text.toString()
             val bookGenre = binding.etBookGenre.text.toString()
             val bookProgress = binding.etBookProgress.text.toString().toIntOrNull() ?: 0
+            val bookNumberOfPages = binding.etBookNumberOfPages.text.toString().toIntOrNull() ?: 0 // Adăugat
 
             if (bookName.isNotEmpty() && bookAuthor.isNotEmpty() && bookGenre.isNotEmpty()) {
                 val newBook = Book(
@@ -43,7 +44,8 @@ class AddBookFragment : Fragment() {
                     name = bookName,
                     author = bookAuthor,
                     genre = bookGenre,
-                    progress = bookProgress
+                    progress = bookProgress,
+                    numberOfPages = bookNumberOfPages // Adăugat
                 )
                 lifecycleScope.launch {
                     context?.let {
@@ -63,3 +65,4 @@ class AddBookFragment : Fragment() {
         _binding = null
     }
 }
+

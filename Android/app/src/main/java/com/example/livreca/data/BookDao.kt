@@ -16,5 +16,10 @@ interface BookDao {
 
     @Query("UPDATE books SET progress = :progress WHERE id = :bookId")
     suspend fun updateProgress(bookId: Int, progress: Int)
+
+    @Query("UPDATE books SET numberOfPages = :numberOfPages WHERE id = :bookId") // Adăugat
+    suspend fun updateNumberOfPages(bookId: Int, numberOfPages: Int) // Adăugat
 }
+
+
 

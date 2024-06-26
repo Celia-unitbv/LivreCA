@@ -10,5 +10,6 @@ data class Book(
     val name: String,
     val author: String,
     val genre: String,
-    val progress: Int = 0
+    val progress: Int = 0,
+    val numberOfPages: Int
 )
