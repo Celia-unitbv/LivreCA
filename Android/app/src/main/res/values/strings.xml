@@ -24,6 +24,11 @@
     <string name="book_saved" >Cartea a fost salvată cu succes!</string>
     <string name="add_book" >Adaugă o carte</string>
     <string name="dark_mode">"Dark mode "</string>
+    <string name="calculate_percentage">Calculează progres</string>
+    <string name="progress_update_message">Ai citit 0% din carte</string>
+    <string name="add_number_of_pages">Introdu numărul paginii la care ai ajuns</string>
+    <string name="book_title">Titlul cărții</string>
+    <string name="progres_view">Progres: 0%</string>
 
 
 </resources>

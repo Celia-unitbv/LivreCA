@@ -27,8 +27,8 @@ class BookAdapter : ListAdapter<Book, BookAdapter.BookViewHolder>(BookDiffCallba
             binding.bookAuthor.text = book.author
             binding.bookGenre.text = book.genre
             binding.progressBar.progress = book.progress
-            binding.progressText.text = "Progress: ${book.progress}%"
-            binding.bookNumberOfPages.text = "Pages: ${book.numberOfPages}" // Adăugat
+            binding.progressText.text = "Progres: ${book.progress}%"
+            binding.bookNumberOfPages.text = "Pagini: ${book.numberOfPages}" // Adăugat
 
             // Setăm un click listener pe itemView
             itemView.setOnClickListener {

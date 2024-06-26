@@ -3,39 +3,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    style="@style/SCREEN">
 
     <TextView
         android:id="@+id/book_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book Title"
-        android:textSize="24sp"
+        android:text="@string/book_title"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        style="@style/TEXTVIEW"
+        android:fontFamily="@font/ingrid_darling"
         android:layout_gravity="center_horizontal"
-        android:paddingBottom="16dp"/>
+    />
 
     <EditText
         android:id="@+id/current_page"
+        style="@style/TEXTVIEW"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter current page"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/jacques_francois"
+        android:hint="@string/add_number_of_pages"
         android:inputType="number"
-        android:padding="8dp"
-        android:layout_marginBottom="16dp"/>
+        android:padding="8dp" />
 
     <Button
         android:id="@+id/calculate_button"
-        android:layout_width="wrap_content"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:text="Calculate Progress"
+        android:fontFamily="@font/jacques_francois"
+        android:padding="10dp"
+        android:text="@string/calculate_percentage"
+        style="@style/BUTTON"
         android:layout_gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/percentage_read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You have read 0% of the book."
+        android:text="@string/progress_update_message"
         android:textSize="18sp"
+        style="@style/TEXTVIEW"
         android:layout_gravity="center_horizontal"
         android:paddingTop="16dp"
         android:visibility="gone"/>

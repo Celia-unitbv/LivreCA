@@ -56,10 +56,10 @@ class BookDetailFragment : Fragment() {
                         }
 
                         // Actualizăm UI-ul cu progresul citirii
-                        percentageReadTextView.text = "You have read $percentage% of the book."
+                        percentageReadTextView.text = "Ai citit $percentage% din carte."
                         percentageReadTextView.visibility = View.VISIBLE
                     } else {
-                        percentageReadTextView.text = "Please enter a valid page number."
+                        percentageReadTextView.text = "Te rog, adaugă un număr valid."
                         percentageReadTextView.visibility = View.VISIBLE
                     }
                 }

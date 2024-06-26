@@ -36,11 +36,11 @@ class RegisterFragment : Fragment() {
                 lifecycleScope.launch {
                     context?.let {
                         AppDatabase.getDatabase(it).userDao().insert(user)
-                        Toast.makeText(it, "User registered successfully", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(it, "Utilizatorul a fost înregistrat cu succes!", Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {
-                Toast.makeText(context, "Please fill all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Completează toate câmpurile!", Toast.LENGTH_SHORT).show()
             }
         }
     }

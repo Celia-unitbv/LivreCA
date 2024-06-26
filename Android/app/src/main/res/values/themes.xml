@@ -38,5 +38,10 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="ITEMBOOK">
+        <item name="android:background">@drawable/gradient_item_book</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 
 </resources>

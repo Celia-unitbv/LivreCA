@@ -51,12 +51,12 @@ class AddBookFragment : Fragment() {
                 lifecycleScope.launch {
                     context?.let {
                         AppDatabase.getDatabase(it).bookDao().insert(newBook)
-                        Toast.makeText(it, "Book added successfully", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(it, "Cartea a fost adăugată cu succes!", Toast.LENGTH_SHORT).show()
                         findNavController().navigateUp()
                     }
                 }
             } else {
-                Toast.makeText(context, "Please fill all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Te rog, completează toate câmpurile!", Toast.LENGTH_SHORT).show()
             }
         }
     }

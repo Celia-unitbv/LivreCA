@@ -8,32 +8,36 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="8dp"
-        android:background="@drawable/gradient_item_book">
+        style="@style/SCREEN">
 
         <TextView
             android:id="@+id/book_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
+            style="@style/TEXTVIEW"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/book_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TEXTVIEW"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/book_genre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TEXTVIEW"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/book_number_of_pages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp" /> <!-- Adăugat -->
+            style="@style/TEXTVIEW"
+            android:textSize="14sp" />
 
 
         <ProgressBar
@@ -42,14 +46,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="100"
-            android:progress="0" />
+            android:progress="0"
+            />
 
         <TextView
             android:id="@+id/progress_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:text="Progress: 0%" />
+            style="@style/TEXTVIEW"
+            android:text="@string/progres_view" />
 
     </LinearLayout>
 </layout>

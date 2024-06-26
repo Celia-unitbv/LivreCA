@@ -36,17 +36,17 @@ class LoginFragment : Fragment() {
                     context?.let {
                         val user = AppDatabase.getDatabase(it).userDao().getUser(username, password)
                         if (user != null) {
-                            Toast.makeText(it, "Login successful", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(it, "Conectare reușită!", Toast.LENGTH_SHORT).show()
 
                             val action = LoginFragmentDirections.actionLoginFragmentToBookListFragment(user.id)
                             findNavController().navigate(action)
                         } else {
-                            Toast.makeText(it, "Invalid username or password", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(it, "Parolă sau username greșite!", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
             } else {
-                Toast.makeText(context, "Please fill all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Completează toate câmpurile!", Toast.LENGTH_SHORT).show()
             }
         }
     }

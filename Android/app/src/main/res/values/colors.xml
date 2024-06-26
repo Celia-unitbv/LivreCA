@@ -8,4 +8,5 @@
     <color name="dirty_beige">#FADBBE</color>
     <color name="gray">#808080</color>
     <color name="darker_gray">#514F4C</color>
+    <color name="transparent_beige">#8FF9E2C0</color>
 </resources>
