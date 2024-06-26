@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/gradient_app_background">
+    style="@style/SCREEN">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

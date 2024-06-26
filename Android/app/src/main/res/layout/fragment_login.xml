@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
-    android:background="@drawable/gradient_app_background">
+    style="@style/SCREEN">
 
     <TextView
         android:id="@+id/tv_welcome_message"
