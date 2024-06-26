@@ -4,35 +4,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:gravity="center"
     android:background="@drawable/gradient_app_background">
 
     <EditText
         android:id="@+id/et_book_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@drawable/text_selector_color"
         android:hint="Book Name" />
 
     <EditText
         android:id="@+id/et_book_author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@drawable/text_selector_color"
         android:hint="Author" />
 
     <EditText
         android:id="@+id/et_book_genre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@drawable/text_selector_color"
         android:hint="Genre" />
 
     <EditText
         android:id="@+id/et_book_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@drawable/text_selector_color"
         android:hint="Progress (%)" />
 
     <Button
         android:id="@+id/btn_save_book"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/jacques_francois"
+        android:padding="10dp"
+        android:textSize="25sp"
         android:text="Save Book" />
 </LinearLayout>
