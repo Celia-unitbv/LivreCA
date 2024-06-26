@@ -1,7 +1,42 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
     <style name="Base.Theme.LIVREca" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Definire culori utilizate în tema aplicației -->
+        <item name="colorPrimary">@color/beige</item>
+        <item name="colorPrimaryVariant">@color/brown</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/beige</item>
+        <item name="colorSecondaryVariant">@color/brown</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnBackground">@color/beige</item>
+        <item name="colorSurface">@color/black</item>
+        <item name="colorOnSurface">@color/brown</item>
+    </style>
+
+    <!-- Tema aplicației, derivată din tema de bază -->
+    <style name="Theme.LIVREca" parent="Base.Theme.LIVREca">
+        <!-- Poți adăuga aici alte stiluri specifice pentru tema aplicației tale -->
+    </style>
+
+
+    <!--  Dark mode -->
+    <!-- Screen background if dark mode on -->
+    <style name="SCREEN">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <!-- Text background if dark mode on -->
+    <style name="TEXTVIEW">
+        <item name="android:textColor">@color/beige</item>
+    </style>
+    <style name="EDITTEXT">
+        <item name="android:textColor">@drawable/text_selector_color</item>
+    </style>
+
+    <!-- Button background if dark mode on -->
+    <style name="BUTTON">
+        <item name="android:background">@color/beige</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 </resources>
