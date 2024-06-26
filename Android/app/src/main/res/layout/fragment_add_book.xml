@@ -12,28 +12,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@drawable/text_selector_color"
-        android:hint="Book Name" />
+        android:fontFamily="@font/jacques_francois"
+        android:text="@string/book_name"
+        />
 
     <EditText
         android:id="@+id/et_book_author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@drawable/text_selector_color"
-        android:hint="Author" />
+        android:fontFamily="@font/jacques_francois"
+        android:text="@string/book_author"
+        />
 
     <EditText
         android:id="@+id/et_book_genre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@drawable/text_selector_color"
-        android:hint="Genre" />
+        android:fontFamily="@font/jacques_francois"
+        android:text="@string/book_genre"
+        />
 
     <EditText
         android:id="@+id/et_book_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@drawable/text_selector_color"
-        android:hint="Progress (%)" />
+        android:fontFamily="@font/jacques_francois"
+        android:text="@string/book_progress"        />
 
     <Button
         android:id="@+id/btn_save_book"
@@ -44,5 +51,5 @@
         android:fontFamily="@font/jacques_francois"
         android:padding="10dp"
         android:textSize="25sp"
-        android:text="Save Book" />
+    android:text="@string/save_book" />
 </LinearLayout>

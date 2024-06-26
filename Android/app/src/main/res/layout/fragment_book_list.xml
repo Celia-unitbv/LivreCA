@@ -22,5 +22,5 @@
         android:fontFamily="@font/jacques_francois"
         android:padding="10dp"
         android:textSize="20dp"
-        android:text="Add Test Book" />
+        android:text="@string/add_book" />
 </LinearLayout>
