@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -39,6 +40,19 @@
         <action
             android:id="@+id/action_bookListFragment_to_addBookFragment"
             app:destination="@id/addBookFragment" />
+        <action
+            android:id="@+id/action_bookListFragment_to_bookDetailFragment"
+            app:destination="@id/bookDetailFragment">
+            <argument
+                android:name="BOOK_TITLE"
+                app:argType="string" />
+            <argument
+                android:name="BOOK_ID"
+                app:argType="integer" />
+            <argument
+                android:name="TOTAL_PAGES"
+                app:argType="integer" />
+        </action>
     </fragment>
 
     <fragment
@@ -49,4 +63,10 @@
             android:name="userId"
             app:argType="integer" />
     </fragment>
+
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.example.livreca.BookDetailFragment"
+        tools:layout="@layout/fragment_book_detail" />
+
 </navigation>

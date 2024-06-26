@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Title"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/current_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter current page"
+        android:inputType="number"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Progress"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/percentage_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have read 0% of the book."
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:visibility="gone"/>
+</LinearLayout>
