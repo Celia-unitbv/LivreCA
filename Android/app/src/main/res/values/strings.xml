@@ -1,9 +1,12 @@
 <resources>
+    // fragment start
     <string name="app_name">LIVREca</string>
     <string name="login">Am deja un cont</string>
     <string name="Register">Sunt nou aici</string>
     <string name="welcome">Bine ai venit!</string>
     <string name="title">LivreCa</string>
+
+    // fragment login and register
     <string name="username">Nume de utilizator</string>
     <string name="password">Parola</string>
     <string name="login_button">Conectare</string>
@@ -11,6 +14,15 @@
     <string name="register_button" >Înregistrare</string>
     <string name="login_message" >Hai să ne cunoaștem! </string>
     <string name="register_message" >Bine ai revenit! </string>
+
+    // fragment book list
+    <string name="book_name" >Numele cărții</string>
+    <string name="book_author" >Autor</string>
+    <string name="book_genre" >Gen</string>
+    <string name="book_progress" >Progres (%)</string>
+    <string name="save_book" >Salvează cartea</string>
+    <string name="book_saved" >Cartea a fost salvată cu succes!</string>
+    <string name="add_book" >Adaugă o carte</string>
 
 
 </resources>

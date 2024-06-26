@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Switch
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.livreca.databinding.FragmentStartBinding
@@ -13,6 +14,12 @@ class StartFragment : Fragment() {
 
     private var _binding: FragmentStartBinding? = null
     private val binding get() = _binding!!
+
+    // Declararea variabilelor
+    var switcher: Switch? = null
+    var nightMODE: Boolean = false
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
