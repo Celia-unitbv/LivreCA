@@ -35,17 +35,18 @@ class AddBookFragment : Fragment() {
             val bookName = binding.etBookName.text.toString()
             val bookAuthor = binding.etBookAuthor.text.toString()
             val bookGenre = binding.etBookGenre.text.toString()
-            val bookProgress = binding.etBookProgress.text.toString().toIntOrNull() ?: 0
-            val bookNumberOfPages = binding.etBookNumberOfPages.text.toString().toIntOrNull() ?: 0 // Adăugat
+            val bookNumberOfPagesStr = binding.etBookNumberOfPages.text.toString()
+            val bookProgress = 0
 
-            if (bookName.isNotEmpty() && bookAuthor.isNotEmpty() && bookGenre.isNotEmpty()) {
+            if (bookName.isNotBlank() && bookAuthor.isNotBlank() && bookGenre.isNotBlank() && bookNumberOfPagesStr.isNotBlank()) {
+                val bookNumberOfPages = bookNumberOfPagesStr.toInt()
                 val newBook = Book(
                     userId = args.userId,
                     name = bookName,
                     author = bookAuthor,
                     genre = bookGenre,
                     progress = bookProgress,
-                    numberOfPages = bookNumberOfPages // Adăugat
+                    numberOfPages = bookNumberOfPages
                 )
                 lifecycleScope.launch {
                     context?.let {
@@ -65,4 +66,5 @@ class AddBookFragment : Fragment() {
         _binding = null
     }
 }
+
 

@@ -6,51 +6,43 @@
     android:padding="16dp"
     style="@style/SCREEN"
     android:gravity="center">
+
     <EditText
-        android:id="@+id/et_book_name"
+        android:id="@+id/etBookName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/EDITTEXT"
         android:fontFamily="@font/jacques_francois"
-        android:text="@string/book_name"
+        android:hint="Book Name"
         />
 
     <EditText
-        android:id="@+id/et_book_author"
+        android:id="@+id/etBookAuthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/EDITTEXT"
         android:fontFamily="@font/jacques_francois"
-        android:text="@string/book_author"
+        android:hint="Book Author"
         />
 
     <EditText
-        android:id="@+id/et_book_genre"
+        android:id="@+id/etBookGenre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/EDITTEXT"
         android:fontFamily="@font/jacques_francois"
-        android:text="@string/book_genre"
+        android:hint="Book Genre"
         />
 
     <EditText
-        android:id="@+id/et_book_number_of_pages"
+        android:id="@+id/etBookNumberOfPages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Number of Pages"
-        android:inputType="number" /> <!-- Adăugat -->
-
-
-    <EditText
-        android:id="@+id/et_book_progress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/EDITTEXT"
-        android:fontFamily="@font/jacques_francois"
-        android:text="@string/book_progress"        />
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/btn_save_book"
+        android:id="@+id/btnSaveBook"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -58,5 +50,5 @@
         android:fontFamily="@font/jacques_francois"
         android:padding="10dp"
         android:textSize="25sp"
-    android:text="@string/save_book" />
+        android:text="Save Book" />
 </LinearLayout>
