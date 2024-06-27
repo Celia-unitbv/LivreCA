@@ -23,7 +23,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "livreca_database"
                 )
-                    .addMigrations(MIGRATION_2_3, MIGRATION_3_4) // Adăugat MIGRATION_3_4
+                    .addMigrations(MIGRATION_2_3, MIGRATION_3_4)
                     .build()
                 INSTANCE = instance
                 instance

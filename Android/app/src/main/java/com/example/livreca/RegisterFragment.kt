@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.livreca.data.AppDatabase
 import com.example.livreca.data.User
 import com.example.livreca.databinding.FragmentRegisterBinding
@@ -35,8 +36,11 @@ class RegisterFragment : Fragment() {
                 val user = User(username = username, password = password)
                 lifecycleScope.launch {
                     context?.let {
-                        AppDatabase.getDatabase(it).userDao().insert(user)
+                        val userId = AppDatabase.getDatabase(it).userDao().insert(user)
                         Toast.makeText(it, "Utilizatorul a fost înregistrat cu succes!", Toast.LENGTH_SHORT).show()
+
+                        val action = RegisterFragmentDirections.actionRegisterFragmentToBookListFragment(userId.toInt())
+                        findNavController().navigate(action)
                     }
                 }
             } else {
@@ -50,3 +54,4 @@ class RegisterFragment : Fragment() {
         _binding = null
     }
 }
+

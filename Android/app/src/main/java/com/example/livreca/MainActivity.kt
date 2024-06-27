@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
 
-        // Set the theme based on user preference
+
         AppCompatDelegate.setDefaultNightMode(if (getUiModeValue(this) == UI_MODE_DARK) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO)
 
 
@@ -39,21 +39,21 @@ class MainActivity : AppCompatActivity() {
 
         val switchButtonView = findViewById<SwitchCompat>(R.id.btnSwitch)
 
-        // Initialize switch state based on current theme
+
         switchButtonView.isChecked = getUiModeValue(this) == UI_MODE_DARK
 
-        // Switching theme manually using switch button
+
         switchButtonView.setOnCheckedChangeListener { _, isChecked ->
             val newMode = if (isChecked) UI_MODE_DARK else UI_MODE_LIGHT
             sharedPreferences.edit().putInt(UI_MODE, newMode).apply()
             applyTheme(newMode)
         }
 
-        // Setăm Toolbar-ul ca ActionBar
+
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        // Setăm NavController
+
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
         setupActionBarWithNavController(navController)

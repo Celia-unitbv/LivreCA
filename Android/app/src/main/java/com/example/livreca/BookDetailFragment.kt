@@ -34,7 +34,7 @@ class BookDetailFragment : Fragment() {
         calculateButton = view.findViewById(R.id.calculate_button)
         percentageReadTextView = view.findViewById(R.id.percentage_read)
 
-        // Verificăm argumentele și le asignăm valorile corespunzătoare
+
         arguments?.let { args ->
             val bookTitle = args.getString("BOOK_TITLE", "")
             bookId = args.getInt("BOOK_ID", 0)
@@ -49,13 +49,13 @@ class BookDetailFragment : Fragment() {
                     if (currentPage > 0 && currentPage <= totalPages) {
                         val percentage = (currentPage.toDouble() / totalPages * 100).toInt()
 
-                        // Actualizăm progresul în baza de date utilizând Coroutine
+
                         lifecycleScope.launch {
                             val db = AppDatabase.getInstance(requireContext())
                             db.bookDao().updateProgress(bookId, percentage)
                         }
 
-                        // Actualizăm UI-ul cu progresul citirii
+
                         percentageReadTextView.text = "Ai citit $percentage% din carte."
                         percentageReadTextView.visibility = View.VISIBLE
                     } else {

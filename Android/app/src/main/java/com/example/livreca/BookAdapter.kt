@@ -28,14 +28,14 @@ class BookAdapter : ListAdapter<Book, BookAdapter.BookViewHolder>(BookDiffCallba
             binding.bookGenre.text = book.genre
             binding.progressBar.progress = book.progress
             binding.progressText.text = "Progres: ${book.progress}%"
-            binding.bookNumberOfPages.text = "Pagini: ${book.numberOfPages}" // Adăugat
+            binding.bookNumberOfPages.text = "Pagini: ${book.numberOfPages}"
 
-            // Setăm un click listener pe itemView
+
             itemView.setOnClickListener {
                 val action = BookListFragmentDirections.actionBookListFragmentToBookDetailFragment(
-                    book.name,         // Trimitem numele cărții ca BOOK_TITLE
-                    book.id,           // Trimitem ID-ul cărții ca BOOK_ID
-                    book.numberOfPages // Trimitem numărul total de pagini ca TOTAL_PAGES
+                    book.name,
+                    book.id,
+                    book.numberOfPages
                 )
                 it.findNavController().navigate(action)
             }
